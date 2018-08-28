@@ -28,7 +28,7 @@
   "homepage": "https://github.com/starhoshi/only-once#readme",
   "jest": {
     "transform": {
-      "\\.ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "\\.ts": "ts-jest"
     },
     "testRegex": "src/test/.*.test.ts",
     "moduleFileExtensions": [

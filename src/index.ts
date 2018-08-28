@@ -1,6 +1,10 @@
 import * as FirebaseFirestore from '@google-cloud/firestore'
 
 let firestore: FirebaseFirestore.Firestore
+/**
+ * You have to call `OnlyOnce.initialize(admin.firestore()) after admin.initializeApp().`
+ * @param _firestore admin.firestore()
+ */
 export const initialize = (_firestore: FirebaseFirestore.Firestore) => {
   firestore = _firestore
 }
@@ -11,6 +15,10 @@ export interface EventTrigger {
   updatedAt: Date
 }
 
+/**
+ * return true if eventID was already triggred.
+ * @param eventID string
+ */
 export async function wasTriggered(eventID: string): Promise<boolean> {
   return firestore.runTransaction(async t => {
     const ref = firestore.collection(path).doc(eventID)

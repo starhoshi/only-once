@@ -1,0 +1,40 @@
+{
+  "name": "@star__hoshi/only-once",
+  "version": "0.1.0",
+  "description": "Prevent duplicate execution of Cloud Functions.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tslint -p tslint.json && tsc -d",
+    "publish:patch": "yarn run build && npm version patch && git push origin master && git push origin --tags && npm publish --access=public",
+    "publish:minor": "yarn run build && npm version minor && git push origin master && git push origin --tags && npm publish --access=public",
+    "publish:major": "yarn run build && npm version major && git push origin master && git push origin --tags && npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starhoshi/only-once.git"
+  },
+  "keywords": [
+    "firebase",
+    "cloudfunctions",
+    "firestore"
+  ],
+  "author": "star__hoshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/starhoshi/only-once/issues"
+  },
+  "homepage": "https://github.com/starhoshi/only-once#readme",
+  "jest": {
+    "transform": {
+      "\\.ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "src/test/.*.test.ts",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  }
+}

@@ -1,6 +1,8 @@
 # only-once
 
-Prevent duplicate execution of Cloud Functions.
+Prevent duplicate execution of Cloud Functions.  
+You should read this blog. [firestore cloud functions onCreate/onDelete sometimes immediately triggered twice](https://medium.com/@hajimenakamura/firestore-cloud-functions-oncreate-ondelete-sometimes-immediately-triggered-twice-5ecf7eaa9fb2)
+
 
 # Installation
 

@@ -5,7 +5,7 @@ export const initialize = (_firestore: FirebaseFirestore.Firestore) => {
   firestore = _firestore
 }
 
-export const path = '/event'
+export const path = '/eventtrigger'
 export interface EventTrigger {
   createdAt: Date,
   updatedAt: Date
